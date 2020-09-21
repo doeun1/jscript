@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string.html</title>
+</head>
+
+<body>
+    <script>
+
+        var str1 = "Hello";
+        var str2 = new String("hello");
+
+        if (str1 === str2) {//===은 타입까지 비교
+            console.log("같습니다");
+        } else {
+            console.log("다릅니다");
+        }
+
+        str1 = "please locate where 'locate' occurs!";
+        var pos = str1.indexOf('locate');
+        //indexof는 있는지 없는지 유무확인때 씀
+        //lastIndexOf로 쓰면 뒤에서부터 찾고, indexOf로 쓰면 앞에서부터 찾음
+        console.log(pos);
+
+        str1 = "최재영 민해주 김상민 민해주 김상민";
+        str2 ="허성준";
+        if(str1.indexOf(str2)>=0){
+            console.log("있음")
+        }else{
+            console.log("없음")
+        };
+        console.log("serch: "+str1.search("민해주"));
+        console.log("slice: "+str1.slice(14));
+        console.log("subString:" +str1.substring(14));
+        console.log("sutstr:"+str1.substr(14,3));
+
+    </script>
+</body>
+
+</html>

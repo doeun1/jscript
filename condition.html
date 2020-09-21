@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition.html</title>
+</head>
+
+<body>
+    <div id="showResult" style="border: 1px solid red;"></div>
+    <script>
+        var cols = ['일', '월', '화', '수', '목', '금', '토'];
+        // for(var i=0; i<cols.length; i++) {
+        //     console.log(cols[i]);
+        // }
+        //for(String str:list){}
+        // for(col of cols) {//:기호가 자바스크립트에서는 of로 사용
+        //     console.log(col);
+        // }
+        cols.forEach(function (a, b, c) {
+            console.log(a, b, c);
+        });
+        var i = 1;
+        var elem = document.getElementById("showResult");
+        var tag = "<table border = '1'>";
+        //     for(col of cols) {//:기호가 자바스크립트에서는 of로 사용
+        //     console.log(col);
+        //     tag += "<td>"+col+"</td>";
+        // }
+        // cols.forEach(function(a,b,c){
+
+        //     if(b) {
+        //         tag +="<td>" + a +"</td>";
+        //     }else {
+        //         tag +="<tr><td>"+a+"</td>";
+        //     }
+        // });
+        for (col of cols) {
+            console.log(col);
+            tag += "<td>" + col + "</td>";
+        }
+        while (i <= 30) {
+
+            if (i % 7 == 1) {
+                tag += "<tr><td style = 'border : 1px solid red;'>"+i+"</td>";
+            }
+            else {
+
+                tag += "<td>" + i + "</td> ";
+            }
+            i++;
+        }
+
+        console.log(tag);
+        elem.innerHTML = tag;
+        // var bool1 = 10 < 8; //false;
+        // var sum = 0;
+        // for(var i=0; i<5; i++){
+        //     bool1=!bool1;
+        //     if(bool1){
+        //         sum+=i;
+        //     }
+        //     // console.log(i, bool1);
+        // }
+        // console.log(sum);
+        // if(bool1) {
+        //     console.log("참: "+bool1);
+        // }else {
+        //     sonsole.log("거짓:"+bool1);
+        // }
+    </script>
+</body>
+
+</html>
